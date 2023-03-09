@@ -202,3 +202,27 @@ body {
   text-align: center;
   color: #95a1bb;
 }
+
+.reason-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 40px;
+}
+
+.reason-item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+}
+
+.reason-text {
+  margin-left: 60px;
+  max-width: 160px;
+  max-height: 66px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #95a1bb;
+}
