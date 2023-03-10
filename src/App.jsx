@@ -1,7 +1,4 @@
-import { useState } from 'react';
-import Features from './components/Features';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
+import { Navbar, Hero, Features, Journey } from './components';
 
 function App() {
   return (
@@ -9,6 +6,7 @@ function App() {
       <Navbar />
       <Hero />
       <Features />
+      <Journey />
     </div>
   );
 }
