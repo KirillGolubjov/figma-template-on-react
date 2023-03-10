@@ -6,13 +6,13 @@ const Reason = () => {
       {features.map((item) => {
         const { id, name, text, logo } = item;
         return (
-          <article key={id}>
+          <div key={id}>
             <div className='reason-item'>
               <img src={logo} alt='features logo' />
               <h1>{name}</h1>
             </div>
             <p className='reason-text'>{text}</p>
-          </article>
+          </div>
         );
       })}
     </div>
