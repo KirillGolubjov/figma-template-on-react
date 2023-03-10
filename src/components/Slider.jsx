@@ -7,21 +7,34 @@ const Slider = () => {
   const [people, setPeople] = useState(person);
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) setIndex(lastIndex);
+    if (index > lastIndex) setIndex(0);
+  }, [index, people]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index]);
+
   return (
     <section className='container'>
       <div className='slider'>
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;
-          let position = '.nextSlide';
-          if (personIndex === index) {
-            position = 'activeSlide';
-          }
+
+          let position = 'nextSlide';
+          if (personIndex === index) position = 'activeSlide';
+
           if (
             personIndex === index - 1 ||
             (index === 0 && personIndex === people.length - 1)
-          ) {
-            position = 'lastIndex';
-          }
+          )
+            position = 'lastSlide';
+
           return (
             <article key={id} className={position}>
               <img src={image} alt={name} className='person-img' />
