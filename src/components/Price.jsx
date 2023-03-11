@@ -49,7 +49,7 @@ const Price = () => {
                   color: `${button === 'BUY NOW' && 'white'}`,
                 }}
               >
-                {button}
+                <a href=''>{button}</a>
               </button>
             </div>
           );
