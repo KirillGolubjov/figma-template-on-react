@@ -21,7 +21,7 @@ const Slider = () => {
   }, [index]);
 
   return (
-    <section className='container'>
+    <section className='container' style={{ marginBottom: '100px' }}>
       <div className='slider'>
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;

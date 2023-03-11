@@ -4,6 +4,7 @@ import featuresLogo3 from '../assets/images/features-logo-3.jpg';
 import featuresLogo4 from '../assets/images/features-logo-4.jpg';
 import featuresLogo5 from '../assets/images/features-logo-5.jpg';
 import featuresLogo6 from '../assets/images/features-logo-6.jpg';
+import priceIcon from '../assets/images/price-icon.jpg';
 
 export const navLinks = [
   { id: 1, name: 'About' },
@@ -92,3 +93,34 @@ const person = [
 ];
 
 export default person;
+
+export const pricing = [
+  {
+    id: 1,
+    title: 'Free',
+    cost: 0,
+    text: 'Free Up to 2 users Github',
+    button: 'GET STARTED',
+  },
+  {
+    id: 2,
+    title: 'Lite',
+    cost: 199,
+    text: 'Teams Up to 8 users Github',
+    button: 'BUY NOW',
+  },
+  {
+    id: 3,
+    title: 'PRO',
+    cost: 399,
+    text: 'Teams Unlimited users " Github',
+    button: 'BUY NOW',
+  },
+  {
+    id: 4,
+    title: 'Enterprise',
+    cost: priceIcon,
+    text: 'Teams Unlimited users " Github',
+    button: 'CONTACT US',
+  },
+];

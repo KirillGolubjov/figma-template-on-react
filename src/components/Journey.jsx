@@ -4,7 +4,7 @@ import google from '../assets/images/journey-google.jpg';
 
 const Journey = () => {
   return (
-    <section className='container'>
+    <section className='container' style={{ marginBottom: '200px' }}>
       <div className='journey'>
         <img src={basket} alt='basket' />
         <h1>Start your journey here</h1>

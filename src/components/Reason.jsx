@@ -2,7 +2,7 @@ import { features } from '../data/data';
 
 const Reason = () => {
   return (
-    <div className='reason-container'>
+    <div className='reason-container' style={{ marginBottom: '100px' }}>
       {features.map((item) => {
         const { id, name, text, logo } = item;
         return (
