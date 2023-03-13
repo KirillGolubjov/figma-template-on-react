@@ -6,6 +6,7 @@ import {
   Slider,
   Price,
   Portfolio,
+  RegForm,
 } from './components';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Slider />
       <Price />
       <Portfolio />
+      <RegForm />
     </div>
   );
 }

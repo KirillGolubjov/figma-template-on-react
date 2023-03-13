@@ -9,6 +9,7 @@ import Pricing from './Pricing';
 import Price from './Price';
 import Portfolio from './Portfolio';
 import Modal from './Modal';
+import RegForm from './RegForm';
 
 export {
   Features,
@@ -22,4 +23,5 @@ export {
   Price,
   Portfolio,
   Modal,
+  RegForm,
 };
