@@ -7,6 +7,8 @@ import NavLink from './NavLink';
 import Reason from './Reason';
 import Pricing from './Pricing';
 import Price from './Price';
+import Portfolio from './Portfolio';
+import Modal from './Modal';
 
 export {
   Features,
@@ -18,4 +20,6 @@ export {
   Slider,
   Pricing,
   Price,
+  Portfolio,
+  Modal,
 };

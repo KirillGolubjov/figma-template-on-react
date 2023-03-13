@@ -5,6 +5,7 @@ import featuresLogo4 from '../assets/images/features-logo-4.jpg';
 import featuresLogo5 from '../assets/images/features-logo-5.jpg';
 import featuresLogo6 from '../assets/images/features-logo-6.jpg';
 import priceIcon from '../assets/images/price-icon.jpg';
+import portImg from '../assets/images/portfolio.jpg';
 
 export const navLinks = [
   { id: 1, name: 'About' },
@@ -123,4 +124,13 @@ export const pricing = [
     text: 'Teams Unlimited users " Github',
     button: 'CONTACT US',
   },
+];
+
+export const portfolio = [
+  { id: 1, img: portImg },
+  { id: 2, img: portImg },
+  { id: 3, img: portImg },
+  { id: 4, img: portImg },
+  { id: 5, img: portImg },
+  { id: 6, img: portImg },
 ];

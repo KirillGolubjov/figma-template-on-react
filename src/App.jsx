@@ -1,4 +1,12 @@
-import { Navbar, Hero, Features, Journey, Slider, Price } from './components';
+import {
+  Navbar,
+  Hero,
+  Features,
+  Journey,
+  Slider,
+  Price,
+  Portfolio,
+} from './components';
 
 function App() {
   return (
@@ -9,6 +17,7 @@ function App() {
       <Journey />
       <Slider />
       <Price />
+      <Portfolio />
     </div>
   );
 }
