@@ -1,6 +1,8 @@
 import mask from '../assets/images/mask.jpg';
 
 const RegForm = () => {
+  const inputElement = document.querySelector('input');
+  inputElement.setSelectionRange(3, 3);
   return (
     <section className='container'>
       <div className='main-content'>
