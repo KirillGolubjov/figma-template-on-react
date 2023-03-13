@@ -6,6 +6,7 @@ import featuresLogo5 from '../assets/images/features-logo-5.jpg';
 import featuresLogo6 from '../assets/images/features-logo-6.jpg';
 import priceIcon from '../assets/images/price-icon.jpg';
 import portImg from '../assets/images/portfolio.jpg';
+import contIcon from '../assets/images/contact-icon.jpg';
 
 export const navLinks = [
   { id: 1, name: 'About' },
@@ -133,4 +134,28 @@ export const portfolio = [
   { id: 4, img: portImg },
   { id: 5, img: portImg },
   { id: 6, img: portImg },
+];
+
+export const contacts = [
+  {
+    id: 1,
+    icon: contIcon,
+    title: 'San Francisco',
+    address: '1772 Nevskaya Street NW, Suite 21389, Atlanta',
+    phone: '+1 789 123456',
+  },
+  {
+    id: 2,
+    icon: contIcon,
+    title: 'London',
+    address: '65 Brushfield St, London E1 6AA, Great Britain',
+    phone: '+1 123 123456',
+  },
+  {
+    id: 3,
+    icon: contIcon,
+    title: 'Tallinn',
+    address: 'Ülemiste city, Valukoja 10, 11415 Tallinn, Estonia',
+    phone: '+372 55 555 55',
+  },
 ];

@@ -676,3 +676,55 @@ input::placeholder {
   line-height: 22px;
   color: #6e38f7;
 }
+
+/*
+=============== 
+Contacts
+===============
+*/
+
+.contact {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.contact h1 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #363940;
+}
+
+.contact-item {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.contact-item h2 {
+  margin-top: 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #363940;
+}
+
+.contact-item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #95a1bb;
+}
+
+.contact-item a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #6e38f7;
+}
