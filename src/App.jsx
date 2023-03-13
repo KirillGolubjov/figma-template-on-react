@@ -8,6 +8,7 @@ import {
   Portfolio,
   RegForm,
   Contacts,
+  Footer,
 } from './components';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Portfolio />
       <RegForm />
       <Contacts />
+      <Footer />
     </div>
   );
 }

@@ -7,6 +7,9 @@ import featuresLogo6 from '../assets/images/features-logo-6.jpg';
 import priceIcon from '../assets/images/price-icon.jpg';
 import portImg from '../assets/images/portfolio.jpg';
 import contIcon from '../assets/images/contact-icon.jpg';
+import twitterIcon from '../assets/images/twitter-icon.jpg';
+import facebookIcon from '../assets/images/facebook-icon.jpg';
+import youtubeIcon from '../assets/images/youtube-icon.jpg';
 
 export const navLinks = [
   { id: 1, name: 'About' },
@@ -158,4 +161,10 @@ export const contacts = [
     address: 'Ülemiste city, Valukoja 10, 11415 Tallinn, Estonia',
     phone: '+372 55 555 55',
   },
+];
+
+export const social = [
+  { id: 1, icon: twitterIcon },
+  { id: 2, icon: facebookIcon },
+  { id: 3, icon: youtubeIcon },
 ];

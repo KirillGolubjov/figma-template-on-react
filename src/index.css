@@ -661,6 +661,7 @@ input::placeholder {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .content-form p {
@@ -727,4 +728,29 @@ Contacts
   line-height: 22px;
   text-align: center;
   color: #6e38f7;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.footer-info a {
+  margin-left: 13px;
+}
+
+.footer-info p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  color: #95a1bb;
 }

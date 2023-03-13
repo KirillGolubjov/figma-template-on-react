@@ -11,6 +11,7 @@ import Portfolio from './Portfolio';
 import Modal from './Modal';
 import RegForm from './RegForm';
 import Contacts from './Contacts';
+import Footer from './Footer';
 
 export {
   Features,
@@ -26,4 +27,5 @@ export {
   Modal,
   RegForm,
   Contacts,
+  Footer,
 };
