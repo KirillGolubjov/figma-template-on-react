@@ -9,6 +9,7 @@ import {
   RegForm,
   Contacts,
   Footer,
+  SignIn,
 } from './components';
 
 function App() {

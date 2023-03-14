@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import mask from '../assets/images/mask.jpg';
+import { Link } from 'react-router-dom';
 
 const RegForm = () => {
   const initialState = {
@@ -26,7 +27,7 @@ const RegForm = () => {
   };
 
   return (
-    <section className='container'>
+    <section className='container' id='registration'>
       <div className='main-content'>
         <div className='content-text'>
           <h1>Create your free account</h1>
