@@ -201,44 +201,44 @@ a:hover {
 
 .hero-img-1 {
   position: absolute;
-  top: 142px;
+  top: 242px;
   right: 342px;
 }
 .hero-img-2 {
   position: absolute;
-  top: 170.5px;
+  top: 270.5px;
   right: 342px;
 }
 .hero-img-3 {
   position: absolute;
-  top: 610px;
+  top: 710px;
   right: 340.4px;
   background-color: #e1e5ee;
 }
 .hero-img-4 {
   position: absolute;
-  top: 609px;
+  top: 709px;
   right: 340px;
 }
 
 .hero-img-5 {
   position: absolute;
-  top: 250px;
+  top: 350px;
   right: 652px;
 }
 .hero-img-6 {
   position: absolute;
-  top: 240.1px;
+  top: 340.1px;
   right: 642px;
 }
 .hero-img-icon-1 {
   position: absolute;
-  top: 340px;
+  top: 440px;
   right: 542px;
 }
 .hero-img-icon-2 {
   position: absolute;
-  top: 400.5px;
+  top: 500.5px;
   right: 693px;
 }
 
@@ -776,4 +776,88 @@ Footer
   line-height: 22px;
   text-align: right;
   color: #95a1bb;
+}
+
+@media (max-width: 1780px) {
+  .hero-img-1,
+  .hero-img-2,
+  .hero-img-3,
+  .hero-img-4,
+  .hero-img-5,
+  .hero-img-6,
+  .hero-img-icon-1,
+  .hero-img-icon-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1410px) {
+  .hero,
+  .hero-btn,
+  .hero-text,
+  .hero-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .ul-nav-links {
+    gap: 10px;
+  }
+  .nav-btn {
+    margin-right: 5rem;
+  }
+  .nav-btn-up {
+    margin-left: 10px;
+  }
+  .portfolio-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  img.logo {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-btn {
+    margin-right: 0px;
+  }
+
+  .reason-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    margin-right: 30px;
+  }
+  .portfolio-images,
+  .reason-container,
+  .pricing-list,
+  .main-content,
+  .contact-item {
+    grid-template-columns: 1fr;
+  }
+  .slider p,
+  .portfolio-header p {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+  }
 }

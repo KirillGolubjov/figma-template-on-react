@@ -1,10 +1,9 @@
-import portImg from '../assets/images/portfolio.jpg';
 import Modal from './Modal';
 import { useGlobalContext } from '../context';
 import { portfolio } from '../data/data';
 
 const Portfolio = () => {
-  const { openModal } = useGlobalContext();
+  const { toggleModal } = useGlobalContext();
 
   return (
     <section className='container'>
@@ -22,7 +21,7 @@ const Portfolio = () => {
               <button
                 key={item.id}
                 className='btn-portfolio'
-                onClick={openModal}
+                onClick={toggleModal}
               >
                 <img src={item.img} />;
               </button>

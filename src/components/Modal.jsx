@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context';
 import portImgBig from '../assets/images/portfolio-big.jpg';
 
 const Modal = () => {
-  const { isModalOpen, closeModal } = useGlobalContext();
+  const { isModalOpen, toggleModal } = useGlobalContext();
   return (
     <div
       className={`${
@@ -12,7 +12,7 @@ const Modal = () => {
     >
       <div className='modal-container'>
         <img src={portImgBig} alt='' />
-        <button className='close-modal-btn' onClick={closeModal}>
+        <button className='close-modal-btn' onClick={toggleModal}>
           <FaTimes />
         </button>
       </div>

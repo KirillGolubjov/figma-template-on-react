@@ -15,11 +15,6 @@ const Price = () => {
       <div className='pricing-list'>
         {prices.map((price) => {
           const { id, title, cost, text, button } = price;
-          const textArr = text.split(',');
-          const firstLine = textArr[0].split(' ')[0];
-          const secondLine = textArr[0].split(' ').slice(1, 4).join(' ');
-          const thirdLine = textArr[0].split(' ').pop();
-
           return (
             <div key={id} className='pricing-box'>
               <h2>{title}</h2>
@@ -35,11 +30,11 @@ const Price = () => {
               </h1>
 
               <div className='pricing-text'>
-                {firstLine}
+                {text[0]}
                 <br />
-                {secondLine}
+                {text[1]}
                 <br />
-                {thirdLine}
+                {text[2]}
               </div>
               <button
                 type='button'
@@ -47,6 +42,7 @@ const Price = () => {
                 style={{
                   backgroundColor: `${button === 'BUY NOW' && '#6E38F7'}`,
                   color: `${button === 'BUY NOW' && 'white'}`,
+                  button_type: 'buy',
                 }}
               >
                 <a href=''>{button}</a>

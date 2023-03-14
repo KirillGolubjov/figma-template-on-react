@@ -5,16 +5,12 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
-    <AppContext.Provider value={{ openModal, closeModal, isModalOpen }}>
+    <AppContext.Provider value={{ toggleModal, isModalOpen }}>
       {children}
     </AppContext.Provider>
   );
