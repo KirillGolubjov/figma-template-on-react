@@ -591,6 +591,13 @@ Modal
   cursor: pointer;
   border: none;
   background-color: transparent;
+  padding-top: 18px;
+}
+
+.btn-portfolio:hover {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 /*
