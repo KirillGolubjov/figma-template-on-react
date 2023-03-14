@@ -672,6 +672,7 @@ input::placeholder {
 }
 
 .content-form button {
+  width: 100%;
   margin: 10px 0 10px;
   background: #6e38f7;
   border-radius: 4px;

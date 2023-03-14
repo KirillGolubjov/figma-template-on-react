@@ -1,6 +1,30 @@
+import { useState } from 'react';
 import mask from '../assets/images/mask.jpg';
 
 const RegForm = () => {
+  const initialState = {
+    name: '',
+    email: '',
+    password: '',
+    passwordConfirm: '',
+  };
+
+  const [values, setValues] = useState(initialState);
+
+  const handleFormInput = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, password, passwordConfirm } = values;
+    if (!name || !email || !password || !passwordConfirm) {
+      alert('Please fill out the fields');
+      return;
+    }
+    alert('Registered!');
+  };
+
   return (
     <section className='container'>
       <div className='main-content'>
@@ -29,17 +53,37 @@ const RegForm = () => {
           </ul>
         </div>
         <div className='content-form'>
-          <form>
-            <input type='text' name='name' placeholder='Name' />
-            <input type='email' name='email' placeholder='Email' />
-            <input type='password' name='password' placeholder='Password' />
+          <form onSubmit={onSubmit}>
+            <input
+              type='text'
+              name='name'
+              placeholder='Name'
+              value={values.name}
+              onChange={handleFormInput}
+            />
+            <input
+              type='email'
+              name='email'
+              placeholder='Email'
+              value={values.email}
+              onChange={handleFormInput}
+            />
             <input
               type='password'
               name='password'
-              placeholder='Repeat password'
+              placeholder='Password'
+              value={values.password}
+              onChange={handleFormInput}
             />
+            <input
+              type='password'
+              name='passwordConfirm'
+              placeholder='Repeat password'
+              value={values.passwordConfirm}
+              onChange={handleFormInput}
+            />
+            <button type='submit'>Registration</button>
           </form>
-          <button>Registration</button>
           <p>
             Already have an account? <a href=''>Sign In</a>
           </p>
