@@ -885,3 +885,7 @@ Footer
     flex-direction: column;
   }
 }
+
+.Toastify__toast {
+  text-transform: capitalize;
+}

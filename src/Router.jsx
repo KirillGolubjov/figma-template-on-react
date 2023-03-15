@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import { SignIn } from './components';
 import { Error, Register } from './pages';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Router = () => {
   return (
@@ -12,6 +14,7 @@ const Router = () => {
         <Route path='/signin/' element={<SignIn />} />
         <Route path='/register/' element={<Register />} />
       </Routes>
+      <ToastContainer position='top-center' />
     </BrowserRouter>
   );
 };

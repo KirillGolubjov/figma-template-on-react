@@ -2,15 +2,20 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mask from '../assets/images/mask.jpg';
+import { FormRow } from '../components';
+import { toast } from 'react-toastify';
+import { useSelector, useDispatch } from 'react-redux';
+import { registerUser } from '../features/user/userSlice';
+
+const initialState = {
+  name: '',
+  email: '',
+  password: '',
+};
 
 const Register = () => {
-  const initialState = {
-    name: '',
-    email: '',
-    password: '',
-    passwordConfirm: '',
-    isMember: true,
-  };
+  const dispatch = useDispatch();
+  const { isLoading, user } = useSelector((store) => store.user);
 
   const [values, setValues] = useState(initialState);
 
@@ -20,12 +25,12 @@ const Register = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, passwordConfirm } = values;
-    if (!name || !email || !password || !passwordConfirm) {
-      alert('Please fill out the fields');
+    const { name, email, password } = values;
+    if (!name || !email || !password) {
+      toast.error('Please fill out the fields');
       return;
     }
-    alert('Registered!');
+    dispatch(registerUser({ name, email, password }));
   };
 
   return (
@@ -57,35 +62,40 @@ const Register = () => {
         </div>
         <div className='content-form'>
           <form onSubmit={onSubmit}>
-            <input
-              type='text'
+            {/* Name */}
+            <FormRow
+              type='name'
               name='name'
-              placeholder='Name'
+              placeholder='Full Name'
               value={values.name}
-              onChange={handleFormInput}
+              handleFormInput={handleFormInput}
             />
-            <input
+
+            {/* email */}
+            <FormRow
               type='email'
               name='email'
               placeholder='Email'
               value={values.email}
-              onChange={handleFormInput}
+              handleFormInput={handleFormInput}
             />
-            <input
+
+            {/* password */}
+            <FormRow
               type='password'
               name='password'
               placeholder='Password'
               value={values.password}
-              onChange={handleFormInput}
+              handleFormInput={handleFormInput}
             />
-            <input
-              type='password'
-              name='passwordConfirm'
-              placeholder='Repeat password'
-              value={values.passwordConfirm}
-              onChange={handleFormInput}
-            />
-            <button type='submit'>Registration</button>
+
+            <button
+              type='submit'
+              disabled={isLoading}
+              style={{ marginTop: '30px' }}
+            >
+              {isLoading ? 'Loading...' : 'Register'}
+            </button>
           </form>
           <p>
             Already have an account? <Link to='/signin/'>Sign In</Link>

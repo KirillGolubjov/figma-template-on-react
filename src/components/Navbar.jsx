@@ -15,10 +15,10 @@ const Navbar = () => {
       </div>
       <div className='nav-btn'>
         <Link to='/signin/' className='nav-btn-in'>
-          SING IN
+          SIGN IN
         </Link>
         <Link to='/register/' className='nav-btn-up'>
-          SING UP
+          SIGN UP
         </Link>
       </div>
     </section>

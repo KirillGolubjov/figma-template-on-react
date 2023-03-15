@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import mask from '../assets/images/mask.jpg';
 
-const RegForm = () => {
-  const initialState = {
-    name: '',
-    email: '',
-    password: '',
-    passwordConfirm: '',
-  };
+const initialState = {
+  name: '',
+  email: '',
+  password: '',
+  passwordConfirm: '',
+};
 
+const RegForm = () => {
   const [values, setValues] = useState(initialState);
 
   const handleFormInput = (e) => {

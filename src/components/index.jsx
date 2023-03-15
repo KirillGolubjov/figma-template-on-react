@@ -12,7 +12,8 @@ import Modal from './Modal';
 import RegForm from './RegForm';
 import Contacts from './Contacts';
 import Footer from './Footer';
-import SignIn from './SignIn';
+import SignIn from '../pages/SignIn';
+import FormRow from './FormRow';
 
 export {
   Features,
@@ -30,4 +31,5 @@ export {
   Contacts,
   Footer,
   SignIn,
+  FormRow,
 };

@@ -2,12 +2,19 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import mask from '../assets/images/mask.jpg';
+import FormRow from '../components/FormRow';
+import { useSelector, useDispatch } from 'react-redux';
+import { loginUser } from '../features/user/userSlice';
+import { toast } from 'react-toastify';
+
+const initialState = {
+  email: '',
+  password: '',
+};
 
 const SignIn = () => {
-  const initialState = {
-    email: '',
-    password: '',
-  };
+  const dispatch = useDispatch();
+  const { isLoading, user } = useSelector((store) => store.user);
 
   const [values, setValues] = useState(initialState);
 
@@ -19,11 +26,12 @@ const SignIn = () => {
     e.preventDefault();
     const { email, password } = values;
     if (!email || !password) {
-      alert('Please fill out the fields');
+      toast.error('Please fill out the fields');
       return;
     }
-    alert('Logged In!');
+    dispatch(loginUser({ email, password }));
   };
+
   return (
     <Wrapper className='container'>
       <div className='main-content'>
@@ -46,22 +54,27 @@ const SignIn = () => {
         </div>
         <div className='content-form'>
           <form onSubmit={onSubmit}>
-            <input
+            {/* email */}
+            <FormRow
               type='email'
               name='email'
               placeholder='Email'
               value={values.email}
-              onChange={handleFormInput}
+              handleFormInput={handleFormInput}
             />
-            <input
+
+            {/* password */}
+            <FormRow
               type='password'
               name='password'
               placeholder='Password'
               value={values.password}
-              onChange={handleFormInput}
+              handleFormInput={handleFormInput}
             />
 
-            <button type='submit'>Log In</button>
+            <button type='submit' disabled={isLoading}>
+              {isLoading ? 'Loading...' : 'Log In'}
+            </button>
           </form>
           <p>
             Not a member yet? <Link to='/register/'>Sign Up</Link>
