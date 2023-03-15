@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import mask from '../assets/images/mask.jpg';
 
-const RegForm = () => {
+const Register = () => {
   const initialState = {
     name: '',
     email: '',
     password: '',
     passwordConfirm: '',
+    isMember: true,
   };
 
   const [values, setValues] = useState(initialState);
@@ -26,7 +29,7 @@ const RegForm = () => {
   };
 
   return (
-    <section className='container' id='registration'>
+    <Wrapper className='container'>
       <div className='main-content'>
         <div className='content-text'>
           <h1>Create your free account</h1>
@@ -85,11 +88,24 @@ const RegForm = () => {
             <button type='submit'>Registration</button>
           </form>
           <p>
-            Already have an account? <a href=''>Sign In</a>
+            Already have an account? <Link to='/signin/'>Sign In</Link>
           </p>
         </div>
       </div>
-    </section>
+    </Wrapper>
   );
 };
-export default RegForm;
+export default Register;
+
+const Wrapper = styled.main`
+  display: grid;
+  align-items: center;
+  margin-top: auto;
+  border-top: 5px solid #6e38f7;
+  background-color: var(--clr-grey-10);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 5rem auto;
+  transition: var(--transition);
+`;

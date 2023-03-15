@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router';
 import logo from '../assets/images/logo.jpg';
 import NavLink from './NavLink';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const nav = useNavigate();
-
   return (
     <section className='navbar'>
       <div className='navbar-logo'>
@@ -16,12 +14,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className='nav-btn'>
-        <a href='' className='nav-btn-in' onClick={() => nav('/signin/')}>
+        <Link to='/signin/' className='nav-btn-in'>
           SING IN
-        </a>
-        <a href='#registration' className='nav-btn-up'>
+        </Link>
+        <Link to='/register/' className='nav-btn-up'>
           SING UP
-        </a>
+        </Link>
       </div>
     </section>
   );
