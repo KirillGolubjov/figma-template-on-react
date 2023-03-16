@@ -917,13 +917,19 @@ Footer
 .btn {
   cursor: pointer;
   color: #fff;
-  background: var(--primary-500);
+  background: #6e38f7;
   border: transparent;
-  border-radius: var(--borderRadius);
-  letter-spacing: var(--letterSpacing);
+  border-radius: 4px;
   padding: 0.375rem 0.75rem;
   box-shadow: var(--shadow-2);
   transition: var(--transition);
-  text-transform: capitalize;
   display: inline-block;
+  width: 157px;
+  height: 46px;
+  font: inherit;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  border-color: #6e38f7;
 }

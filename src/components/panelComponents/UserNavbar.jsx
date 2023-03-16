@@ -2,16 +2,12 @@ import styled from 'styled-components';
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleSidebar, logoutUser } from '../../features/user/userSlice';
+import { logoutUser } from '../../features/user/userSlice';
 
 const UserNavbar = () => {
   const { user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const [showLogout, setShowLogout] = useState(false);
-
-  const toggle = () => {
-    dispatch(toggleSidebar());
-  };
 
   const logout = () => {
     dispatch(logoutUser());
@@ -64,7 +60,7 @@ const Wrapper = styled.nav`
     background: transparent;
     border-color: transparent;
     font-size: 1.75rem;
-    color: var(--primary-500);
+    color: #6e38f7;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -84,7 +80,7 @@ const Wrapper = styled.nav`
 
   .dropdown {
     position: absolute;
-    top: 40px;
+    top: 48px;
     left: 0;
     width: 100%;
     background: var(--primary-100);
@@ -92,7 +88,7 @@ const Wrapper = styled.nav`
     padding: 0.5rem;
     text-align: center;
     visibility: hidden;
-    border-radius: var(--borderRadius);
+    border-radius: 4px;
   }
   .show-dropdown {
     visibility: visible;
@@ -100,12 +96,14 @@ const Wrapper = styled.nav`
   .dropdown-btn {
     background: transparent;
     border-color: transparent;
-    color: var(--primary-500);
-    letter-spacing: var(--letterSpacing);
-    text-transform: capitalize;
+    color: #6e38f7;
+    letter-spacing: 2px;
     cursor: pointer;
+    font-size: 14px;
   }
+
   .logo-text {
+    color: #363940;
     font-size: 25px;
     display: none;
     margin: 0;

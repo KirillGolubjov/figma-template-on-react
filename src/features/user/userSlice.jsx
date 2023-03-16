@@ -9,7 +9,6 @@ import {
 
 const initialState = {
   isLoading: false,
-  isSidebarOpen: false,
   user: getUserFromLocalStorage(),
 };
 
@@ -46,9 +45,6 @@ const userSlice = createSlice({
       state.isSidebarOpen = false;
       removeUserFromLocalStorage();
     },
-    toggleSidebar: (state) => {
-      state.isSidebarOpen = !state.isSidebarOpen;
-    },
   },
   extraReducers: (builder) => {
     builder
@@ -83,6 +79,6 @@ const userSlice = createSlice({
   },
 });
 
-export const { toggleSidebar, logoutUser } = userSlice.actions;
+export const { logoutUser } = userSlice.actions;
 
 export default userSlice.reducer;

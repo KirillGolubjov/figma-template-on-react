@@ -1,9 +1,13 @@
 import { FaTimes } from 'react-icons/fa';
-import { useGlobalContext } from '../context';
+import { useDispatch, useSelector } from 'react-redux';
+// import { useGlobalContext } from '../context';
 import portImgBig from '../assets/images/portfolio-big.jpg';
+import { toggleModal } from '../features/modal/modalSlice';
 
 const Modal = () => {
-  const { isModalOpen, toggleModal } = useGlobalContext();
+  const { isModalOpen } = useSelector((state) => state.modal);
+  const dispatch = useDispatch();
+  // const { isModalOpen, toggleModal } = useGlobalContext();
   return (
     <div
       className={`${
@@ -12,7 +16,10 @@ const Modal = () => {
     >
       <div className='modal-container'>
         <img src={portImgBig} alt='' />
-        <button className='close-modal-btn' onClick={toggleModal}>
+        <button
+          className='close-modal-btn'
+          onClick={() => dispatch(toggleModal())}
+        >
           <FaTimes />
         </button>
       </div>
