@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <section className='navbar'>
+    <nav className='navbar'>
       <div className='navbar-logo'>
         <img src={logo} className='logo' />
       </div>
@@ -21,7 +21,7 @@ const Navbar = () => {
           SIGN UP
         </Link>
       </div>
-    </section>
+    </nav>
   );
 };
 

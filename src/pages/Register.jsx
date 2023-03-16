@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import mask from '../assets/images/mask.jpg';
 import { FormRow } from '../components';
@@ -19,6 +19,8 @@ const Register = () => {
 
   const [values, setValues] = useState(initialState);
 
+  const navigate = useNavigate();
+
   const handleFormInput = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -32,6 +34,14 @@ const Register = () => {
     }
     dispatch(registerUser({ name, email, password }));
   };
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/user/');
+      });
+    }
+  }, [user, navigate]);
 
   return (
     <Wrapper className='container'>
