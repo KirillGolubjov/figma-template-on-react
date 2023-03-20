@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from '../node_modules/react-router-dom';
 import App from './App';
 import { SignIn } from './components';
 import { Error, ProtectedRoute, Register } from './pages';
