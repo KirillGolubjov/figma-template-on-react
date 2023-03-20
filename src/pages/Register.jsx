@@ -21,7 +21,7 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  const handleFormInput = (e) => {
+  const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -78,7 +78,8 @@ const Register = () => {
               name='name'
               placeholder='Full Name'
               value={values.name}
-              handleFormInput={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
 
             {/* email */}
@@ -87,7 +88,8 @@ const Register = () => {
               name='email'
               placeholder='Email'
               value={values.email}
-              handleFormInput={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
 
             {/* password */}
@@ -96,7 +98,8 @@ const Register = () => {
               name='password'
               placeholder='Password'
               value={values.password}
-              handleFormInput={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
 
             <button

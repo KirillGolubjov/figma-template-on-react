@@ -3,6 +3,7 @@ import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../features/user/userSlice';
+import { toggleModal } from '../../features/modal/modalSlice';
 
 const UserNavbar = () => {
   const { user } = useSelector((store) => store.user);
@@ -16,7 +17,7 @@ const UserNavbar = () => {
   return (
     <Wrapper>
       <div className='nav-center'>
-        <button type='button' className='toggle-btn' onClick={toggle}>
+        <button type='button' className='toggle-btn' onClick={toggleModal}>
           <FaAlignLeft />
         </button>
         <div>
@@ -59,13 +60,14 @@ const Wrapper = styled.nav`
   .toggle-btn {
     background: transparent;
     border-color: transparent;
-    font-size: 1.75rem;
+    font-size: 2.2rem;
     color: #6e38f7;
     cursor: pointer;
     display: flex;
     align-items: center;
   }
-  background: var(--white);
+
+  background: #ebf2ff;
   .btn-container {
     position: relative;
   }

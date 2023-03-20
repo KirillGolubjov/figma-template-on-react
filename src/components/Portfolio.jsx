@@ -1,10 +1,8 @@
 import Modal from './Modal';
-// import { useGlobalContext } from '../context';
 import { portfolio } from '../data/data';
 import { toggleModal } from '../features/modal/modalSlice';
 import { useDispatch } from 'react-redux';
 const Portfolio = () => {
-  // const { toggleModal } = useGlobalContext();
   const dispatch = useDispatch();
 
   return (

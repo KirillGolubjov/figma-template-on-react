@@ -106,6 +106,7 @@ body {
   line-height: 1.2;
   color: #040404;
 }
+
 button:hover {
   box-shadow: 0px 0px 5px 0px rgba(110, 56, 247, 0.5);
   transition: all 0.2s ease-in-out;
@@ -703,6 +704,7 @@ input {
   border: 1px solid #cad1e1;
   border-radius: 4px;
   text-indent: 15px;
+  font-size: 16px;
   /* color: transparent;
   text-shadow: 0 0 0 black; */
 }
@@ -927,7 +929,7 @@ Footer
   width: 157px;
   height: 46px;
   font: inherit;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;

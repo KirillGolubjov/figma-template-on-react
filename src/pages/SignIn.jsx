@@ -20,7 +20,7 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
-  const handleFormInput = (e) => {
+  const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -70,7 +70,8 @@ const SignIn = () => {
               name='email'
               placeholder='Email'
               value={values.email}
-              handleFormInput={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
 
             {/* password */}
@@ -79,7 +80,8 @@ const SignIn = () => {
               name='password'
               placeholder='Password'
               value={values.password}
-              handleFormInput={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
 
             <button type='submit' disabled={isLoading}>

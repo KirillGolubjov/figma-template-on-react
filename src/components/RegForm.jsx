@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import mask from '../assets/images/mask.jpg';
+import FormRow from './FormRow';
 
 const initialState = {
   name: '',
@@ -11,7 +13,7 @@ const initialState = {
 const RegForm = () => {
   const [values, setValues] = useState(initialState);
 
-  const handleFormInput = (e) => {
+  const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -54,38 +56,39 @@ const RegForm = () => {
         </div>
         <div className='content-form'>
           <form onSubmit={onSubmit}>
-            <input
-              type='text'
+            {/* Name */}
+            <FormRow
+              type='name'
               name='name'
-              placeholder='Name'
+              placeholder='Full Name'
               value={values.name}
-              onChange={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
-            <input
+
+            {/* email */}
+            <FormRow
               type='email'
               name='email'
               placeholder='Email'
               value={values.email}
-              onChange={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
-            <input
+
+            {/* password */}
+            <FormRow
               type='password'
               name='password'
               placeholder='Password'
               value={values.password}
-              onChange={handleFormInput}
-            />
-            <input
-              type='password'
-              name='passwordConfirm'
-              placeholder='Repeat password'
-              value={values.passwordConfirm}
-              onChange={handleFormInput}
+              handleChange={handleChange}
+              showLabel={false}
             />
             <button type='submit'>Registration</button>
           </form>
           <p>
-            Already have an account? <a href=''>Sign In</a>
+            Already have an account? <Link to='/signin/'>Sign In</Link>
           </p>
         </div>
       </div>
